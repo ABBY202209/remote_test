@@ -1,57 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
+<h1>計算日期間隔</h1>
+設有兩個日期：
+<il>
+    <li>2022-09-10</li>
+    <li>2022-10-21</li>
+</il>
+<br>
+註：從開始日的凌晨零時零分零秒
+<hr>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>日期函式</title>
-</head>
+<?php
+$a='2022-09-10';
+$b='2022-09-12';
 
-<body>
-    <h1>基礎函式</h1>
-    <ul>
-        <li>
-            <h1>date</h1>
+//起算時點沒設定的話，是從 0:0:0 開始
+$aa=strtotime($a."0:0:0"); 
+$bb=strtotime($b."23:59:59")+1; //+1秒
+
+$ans1=($bb-$aa)/86400;
+$ans2=($bb-$aa)/86400-1;
+$ans3=($bb-$aa)/86400-2;
+
+
+
+?>
+
+<div>
+    <ol>
+        <li>包含起始日：
+            <?=$ans1;?>天
         </li>
+        <li>不含起始日：
+            <?=$ans2;?>天 
+        </li>
+        <li>不含起始日和結束日：
+            <?=$ans3;?>天
+        </li>
+    </ol>
 
-        <?php
-        $time = "90000";
-        echo date("y-m-d", $time) . "<br>";
-        echo date("Y-M-D", 90000) . "<br>";
-        echo date("Y/m/d", 90000) . "<br>";
-        echo date("西元Y年m月d日", 90000) . "<br>";
-        echo date("j", 90000) . "<br>";
-        echo date("l", 90000) . "<br>";
-        echo date("N", 90000) . "<br>";
-        echo date("j", 90000) . "<br>";
-        echo date("y-m-d"). "<br>";
-        echo date("L") . "<br>"; //判斷閏年
-        echo date("0",90000)."<br>";
-        date_default_timezone_set("Asia/Taipei");
-        echo date("y-m-d h:i:s l");
-        ?>
+</div>
 
-        <li><h1>strtotime</h1></li>
-        <?php
-        $now= strtotime('now');
-        $coming=$now+(60*60*24)*10;
-        echo $now."秒"."<br>";
-        echo "今天：".date("y-m-d h:I:s l",$now)."<br>";
-        echo "十天後:".date("y-m-d h:i:s l",$coming);
 
-        ?>
-        <li>練習</li>
-        <ol>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-        </ol>
-        <li></li>
-        <li></li>
-    </ul>
-</body>
-
-</html>
+<p>
+    <a href="./index.php">回上一頁</a>
+</p>
