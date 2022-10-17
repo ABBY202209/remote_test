@@ -27,3 +27,7 @@ if(date('N',$sec)<6){
 }
 
 ?>
+
+<p>
+    <a href="./index.php">回上一頁</a>
+</p>

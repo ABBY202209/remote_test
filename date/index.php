@@ -58,7 +58,7 @@
         <ol>
             <li><a href="./d20221017_1.php">計算日期間隔</a></li>
             <li><a href="./d20221017_2.php">計算自己的生日</a></li>
-            <li><a href=""></a></li>
+            <li><a href="./d20221017_3.php"></a>日期格式呈現</li>
             <li><a href=""></a></li>
             <li><a href=""></a></li>
         </ol>
