@@ -16,12 +16,12 @@
         </li>
 
         <?php
-        $time = "90000";
-        echo date("y-m-d", $time) . "<br>";
-        echo date("Y-M-D", 90000) . "<br>";
+        $time=90000;
+        echo date("y-m-d", $time) . "<br>"; //小寫 
+        echo date("Y-M-D", 90000) . "<br>"; //大寫
         echo date("Y/m/d", 90000) . "<br>";
         echo date("西元Y年m月d日", 90000) . "<br>";
-        echo date("j", 90000) . "<br>";
+        echo "本月的第".date("j", 90000) ."天" ."<br>"; 
         echo date("l", 90000) . "<br>";
         echo date("N", 90000) . "<br>";
         echo date("j", 90000) . "<br>";
@@ -56,8 +56,8 @@
         ?>
         <li><h1>練習</h1></li>
         <ol>
-            <li><a href="./d20221017.php">計算日期間隔</a></li>
-            <li><a href=""></a></li>
+            <li><a href="./d20221017_1.php">計算日期間隔</a></li>
+            <li><a href="./d20221017_2.php">計算自己的生日</a></li>
             <li><a href=""></a></li>
             <li><a href=""></a></li>
             <li><a href=""></a></li>
